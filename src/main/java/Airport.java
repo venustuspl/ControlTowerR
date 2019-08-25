@@ -3,26 +3,27 @@ import java.util.ArrayList;
 
 
 public class Airport {
-    private int id;
+
     private String name;
 
-    List<Airport> airports = new ArrayList();
+    private List<Airport> airports = new ArrayList();
 
-    public Airport(int id, String name) {
-        this.id = id;
+    public Airport(String name) {
         this.name = name;
     }
 
-    public int getAirportId() {
-        return this.id;
+    public String getAirportName() {
+
+        return this.name;
     }
 
     public void addToAirports(Airport airport) {
+
         this.airports.add(airport);
     }
 
-    public List getAirports(Airport aiport) {
-        return this.airports;
+    public ArrayList<Airport> getAirports() {
+        return (ArrayList<Airport>) this.airports;
     }
 
 
