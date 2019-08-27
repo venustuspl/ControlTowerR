@@ -1,11 +1,10 @@
 import java.util.List;
 
 class Flight {
-
+    private boolean result = false;
 
     public Boolean findFlight(Airport start, Airport end) {
 
-        Boolean result = false;
 
         if (start.getAirports().size() > 0) {
 

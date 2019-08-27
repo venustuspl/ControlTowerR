@@ -23,6 +23,7 @@ public class Airport {
     }
 
     public ArrayList<Airport> getAirports() {
+
         return (ArrayList<Airport>) this.airports;
     }
 
