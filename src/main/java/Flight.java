@@ -1,30 +1,23 @@
 import java.util.List;
 
 class Flight {
-    private boolean result = false;
 
     public Boolean findFlight(Airport start, Airport end) {
-
-
-        if (start.getAirports().size() > 0) {
-
-            for (Airport entry : start.getAirports()) {
-
-                if (entry.getAirportName() == end.getAirportName()) {
-
-                    result = true;
-
-                    break;
-
-
-                } else {
-
-                    findFlight(entry, end);
-                }
-
-            }
-
+        if (start.getAirports() == null) {
+            return false;
         }
-        return result;
+
+        if (start.getAirports().contains(end)) {
+            return true;
+        }
+
+        for (Airport entry : start.getAirports()) {
+
+            if (findFlight(entry, end)) {
+
+                return true;
+            }
+        }
+        return false;
     }
 }
